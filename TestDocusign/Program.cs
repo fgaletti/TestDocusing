@@ -15,7 +15,10 @@ namespace TestDocusign
 {
     class Program
     {
-        static readonly string DevCenterPage = "https://developers.docusign.com/platform/auth/consent";
+        //This should be in the : Apps and Integration Keys
+        //                           --> 
+
+        static readonly string DevCenterPage = "https://developers.docusign.com/platform/auth/consent"; 
       //  static readonly string DevCenterPage = "http://localhost:8080";
 
         static void Main(string[] args)
@@ -88,10 +91,15 @@ namespace TestDocusign
             string signerEmail = Console.ReadLine();
             Console.Write("Enter the signer's name: ");
             string signerName = Console.ReadLine();
-            Console.Write("Enter the carbon copy's email address: ");
-            string ccEmail = Console.ReadLine();
-            Console.Write("Enter the carbon copy's name: ");
-            string ccName = Console.ReadLine();
+          
+            //Console.Write("Enter the carbon copy's email address: ");
+            //string ccEmail = Console.ReadLine();
+            //Console.Write("Enter the carbon copy's name: ");
+            //string ccName = Console.ReadLine();
+
+            string ccEmail = signerEmail;
+            string ccName = signerName;
+
             //string docDocx = Path.Combine(@"..", "..", "..", "..", "launcher-csharp", "World_Wide_Corp_salary.docx");
             //string docPdf = Path.Combine(@"..", "..", "..", "..", "launcher-csharp", "World_Wide_Corp_lorem.pdf");
             string docDocx = Path.Combine(@"World_Wide_Corp_salary.docx");
